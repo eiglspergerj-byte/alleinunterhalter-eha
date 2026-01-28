@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="de">
+<head>
+<style>
+/* HEADER EXTREM KLEIN – OVERRIDE */
+header{padding:6px 0 6px !important;}
+.hero-card{padding:10px !important;border-radius:18px !important;}
+h1{margin:6px 0 6px !important;font-size:24px !important;line-height:1.1 !important;}
+.sub{margin:0 0 8px !important;font-size:14px !important;}
+.hero-actions{margin-top:8px !important;gap:6px !important;}
+.facts{margin-top:8px !important;}
+.photo{min-height:120px !important;}
+
+img{max-width:100%;height:auto;}
+.cleanlogo{border:none !important;outline:none !important;box-shadow:none !important;background:transparent !important;}
+</style>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EHA – Alleinunterhalter aus Roding | Musik für (fast) jede Veranstaltung</title>
+  <meta name="description" content="EHA – Alleinunterhalter aus Roding: Live-Musik mit Keyboard & Gesang für Hochzeit, Geburtstag, Firmenfeier, Jubiläum, Gartenfest und mehr. Professionell, flexibel, stimmungsvoll." />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Optional: Social Preview (einfach später anpassen) -->
+  <meta property="og:title" content="EHA – Alleinunterhalter aus Roding" />
+  <meta property="og:description" content="Musik für (fast) jede Veranstaltung – Keyboard & Gesang (live)." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#f3f6ff;
+      --card:#ffffff;
+      --card2:#eef2ff;
+      --text:#1f2933;
+      --muted:#4b5563;
+      --brand:#9f7aea;
+      --brand2:#38bdf8;
+      --line: rgba(0,0,0,.08);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 22px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% -10%, rgba(124,58,237,.35), transparent 55%),
+        radial-gradient(1200px 600px at 95% 10%, rgba(6,182,212,.25), transparent 55%),
+        radial-gradient(900px 500px at 40% 120%, rgba(124,58,237,.18), transparent 60%),
+        var(--bg);
+      line-height:1.55;
+    }
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    .nav{
+      position:sticky; top:0; z-index:50;
+      background: linear-gradient(135deg,#eef2ff,#f8fbff);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+    }
+    .nav-inner{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:14px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:14px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      
+      display:grid; place-items:center;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+    .brand span{display:block}
+    .brand .name{font-weight:800; letter-spacing:.2px}
+    .brand .tag{font-size:12px; color:var(--muted)}
+    .nav-links{
+      display:flex; align-items:center; gap:18px;
+      flex-wrap:wrap;
+    }
+    .nav-links a{
+      text-decoration:none; color:var(--muted); font-weight:600; font-size:14px;
+      padding:8px 10px; border-radius:12px;
+    }
+    .nav-links a:hover{background: var(--card)}
+    .cta{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color:#061018;
+      
+      padding:10px 14px;
+      border-radius:14px;
+      font-weight:800;
+      text-decoration:none;
+      display:inline-flex; align-items:center; gap:10px;
+      
+      white-space:nowrap;
+    }
+    .cta:hover{filter:brightness(1.05)}
+    header{padding:10px 0 10px;}
+    .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:10px;align-items:center;}
+    @media (max-width: 900px){
+      .hero{display:grid;grid-template-columns:1.25fr .75fr;gap:10px;align-items:center;}
+      header{padding:10px 0 10px;}
+    }
+    .hero-card{padding:12px;border-radius:18px;}
+    .hero-card:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(500px 220px at 30% 0%, rgba(6,182,212,.22), transparent 60%),
+                  radial-gradient(520px 260px at 80% 10%, rgba(124,58,237,.22), transparent 60%);
+      pointer-events:none;
+    }
+    .hero-card > *{position:relative}
+    .kicker{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px;
+      
+      border-radius:999px;
+      color:var(--muted);
+      font-weight:700;
+      font-size:13px;
+      background: rgba(255,255,255,.03);
+    }
+    h1{margin:6px 0 6px;font-size:clamp(22px,3vw,34px);line-height:1.1;}
+    .sub{margin:0 0 8px;font-size:14px;}
+    .hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;align-items:center;}
+    .btn{
+      
+      background: rgba(255,255,255,.04);
+      color: var(--text);
+      padding:10px 14px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:800;
+      display:inline-flex; gap:10px; align-items:center;
+    }
+    .btn:hover{background: rgba(255,255,255,.07)}
+    .facts{margin-top:8px;}
+    @media (max-width: 520px){
+      .facts{margin-top:8px;}
+    }
+    .fact{
+      padding:12px;
+      border-radius:16px;
+      
+      background: rgba(255,255,255,.03);
+    }
+    .fact b{display:block; font-size:14px}
+    .fact span{color:var(--muted); font-size:12px}
+
+    .side{display:grid; gap:14px;}
+
+    /* FOTO: Lege ein Bild 'eha.jpg' in den gleichen Ordner wie diese Datei
+       und die Website zeigt es automatisch. */
+    .photo{min-height:140px;border-radius:18px;}
+    .photo:after{
+      content:"Foto fehlt: Lege 'eha.jpg' in den Website-Ordner";
+      position:absolute; inset:auto 18px 18px 18px;
+      color: rgba(229,231,235,.85);
+      font-weight:800;
+      font-size:14px;
+      padding:12px 14px;
+      border-radius:16px;
+      
+      background: rgba(11,18,32,.60);
+      backdrop-filter: blur(10px);
+    }
+    .badge{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:12px 14px;
+      border-radius:18px;
+      
+      background: rgba(255,255,255,.05);
+    }
+    .badge .dot{
+      width:10px; height:10px; border-radius:99px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      
+    }
+    section{padding:26px 0}
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+    .card{
+      
+      background: rgba(255,255,255,.04);
+      border-radius: var(--radius);
+      padding:18px;
+    }
+    .card h2{margin:0 0 8px; font-size:22px}
+    .card p{margin:0; color:var(--muted)}
+    .list{
+      margin:12px 0 0; padding:0; list-style:none;
+      display:grid; gap:10px;
+    }
+    .list li{
+      padding:12px 12px;
+      border-radius:16px;
+      
+      background: rgba(255,255,255,.03);
+      display:flex; justify-content:space-between; gap:12px;
+    }
+    .list li span{color:var(--muted)}
+    .pill{
+      display:inline-flex;
+      padding:6px 10px;
+      border-radius:999px;
+      
+      background: rgba(255,255,255,.03);
+      font-size:12px;
+      color: var(--muted);
+      font-weight:800;
+      white-space:nowrap;
+    }
+    .divider{height:1px; background: var(--line); margin:20px 0}
+    .contact{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    @media (max-width: 900px){
+      .contact{grid-template-columns:1fr}
+    }
+    form{display:grid; gap:10px;}
+    input, textarea{
+      width:100%;
+      padding:12px 12px;
+      border-radius:16px;
+      
+      background: rgba(255,255,255,.03);
+      color: var(--text);
+      outline:none;
+      font-size:14px;
+    }
+    textarea{min-height:120px; resize:vertical}
+    input::placeholder, textarea::placeholder{color: rgba(184,192,204,.75)}
+    .small{font-size:12px; color:var(--muted); margin:8px 0 0}
+    footer{
+      padding:24px 0 46px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footer-inner{
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+    }
+    .links{display:flex; gap:14px; flex-wrap:wrap}
+    .links a{color:var(--muted); text-decoration:none}
+    .links a:hover{color:var(--text)}
+  
+.cleanlogo{
+  border:none !important;
+  outline:none !important;
+  box-shadow:none !important;
+  background:transparent !important;
+}
+
+</style>
+
+<style>
+header{padding:10px 0 10px;}
+h1{margin:6px 0 6px;font-size:clamp(22px,3vw,34px);line-height:1.1;}
+.hero{gap:8px !important;align-items:center !important;}
+.hero-actions{margin-top:6px !important;gap:6px !important;}
+</style>
+
+</head>
+
+<body>
+  <div class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="Zur Startseite">
+          <img class="cleanlogo" src="logo.png" alt="EHA Logo" style="height:40px;border-radius:12px;border:none;outline:none;box-shadow:none;background:transparent;">
+          <div>
+            <span class="name">EHA · Alleinunterhalter</span>
+            <span class="tag">Roding · Keyboard & Gesang</span>
+          </div>
+        </a>
+
+        <nav class="nav-links" aria-label="Navigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#repertoire">Repertoire</a>
+          <a href="#uebermich">Über mich</a>
+          <a href="#kontakt" class="cta">Anfrage senden →</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+    <header>
+      <div class="container">
+        <div class="hero">
+          <div class="hero-card">
+            <div class="kicker">🎶 Musik für (fast) jede Veranstaltung</div>
+            <h1>Alleinunterhalter EHA<br/>Keyboard & Gesang – live</h1>
+            <p class="sub">
+              Ob Hochzeit, Geburtstag, Firmenfeier oder Vereinsfest: Ich begleite euer Event mit dem passenden Mix
+              aus Klassikern, aktuellen Hits und echten Mitsing‑Momenten – von dezenter Hintergrundmusik bis zur Party.
+            </p>
+
+            <div class="hero-actions">
+              <a class="cta" href="#kontakt">Verfügbarkeit anfragen →</a>
+              <a class="btn" href="#leistungen">Leistungen ansehen</a>
+              <a class="btn" href="#repertoire">Repertoire & Stil</a>
+            </div>
+
+            <div class="facts" aria-label="Highlights">
+              <div class="fact">
+                <b>Flexibel</b>
+                <span>von dezent bis Party</span>
+              </div>
+              <div class="fact">
+                <b>Komplett-Setup</b>
+                <span>Sound & Technik nach Bedarf</span>
+              </div>
+              <div class="fact">
+                <b>Regional</b>
+                <span>Roding & Umgebung</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="side">
+  <img class="cleanlogo" src="logo.png" alt="EHA Logo" style="width:100%;max-width:360px;margin:0 auto 10px;display:block;border-radius:18px;border:none;outline:none;box-shadow:none;background:transparent;">
+<div class="photo" aria-label="Foto Bereich"></div>
+            <div class="badge">
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <div style="font-weight:900">Unkompliziert buchen</div>
+                <div style="color:var(--muted); font-size:13px">Anfrage · Angebot · Auftritt</div>
+              </div>
+            </div>
+            <div class="badge">
+              <span class="dot" aria-hidden="true"></span>
+              <div>
+                <div style="font-weight:900">Wunschmusik möglich</div>
+                <div style="color:var(--muted); font-size:13px">für besondere Momente</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="leistungen">
+      <div class="container">
+        <div class="grid">
+          <div class="card">
+            <h2>Leistungen</h2>
+            <p>Ein Auftritt, der zu eurem Event passt – musikalisch, in der Lautstärke und im Ablauf.</p>
+
+            <ul class="list">
+              <li><b>Hochzeit</b> <span>Empfang · Dinner · Party</span></li>
+              <li><b>Geburtstag</b> <span>von gemütlich bis tanzbar</span></li>
+              <li><b>Firmenfeier</b> <span>stilsicher & professionell</span></li>
+              <li><b>Vereinsfest / Jubiläum</b> <span>Stimmung & Mitsingen</span></li>
+              <li><b>Gartenfest</b> <span>lockere Atmosphäre</span></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h2>Das bekommt ihr</h2>
+            <p>Klare Absprachen, reibungsloser Aufbau und Musik, die den Raum „liest“.</p>
+
+            <div class="divider"></div>
+
+            <ul class="list">
+              <li>
+                <b>Keyboard & Gesang (live)</b>
+                <span class="pill">authentisch</span>
+              </li>
+              <li>
+                <b>Moderation nach Wunsch</b>
+                <span class="pill">unaufdringlich</span>
+              </li>
+              <li>
+                <b>Technik passend zur Größe</b>
+                <span class="pill">flexibel</span>
+              </li>
+              <li>
+                <b>Musik‑Mix abgestimmt</b>
+                <span class="pill">individuell</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="repertoire">
+      <div class="container">
+        <div class="grid">
+          <div class="card">
+            <h2>Repertoire & Stil</h2>
+            <p>
+              Breiter Mix für alle Generationen: <b>Schlager, Oldies, NDW, Austropop, Pop/Rock, Party‑Klassiker</b> –
+              dazu ruhige Songs für Empfang & Dinner. Lautstärke und Stil passe ich an Location und Gäste an.
+            </p>
+            <p style="margin-top:10px; color:var(--muted)">
+              Tipp: Für Hochzeiten gerne mit <b>Wunschtiteln</b> (z. B. Eröffnungstanz oder besondere Augenblicke).
+            </p>
+          </div>
+
+          <div class="card">
+            <h2>Hörproben / Videos</h2>
+            <p>
+              Hier trägst du später deine Links ein (YouTube, Instagram, SoundCloud …). Wenn du willst,
+              kann ich dir das auch einbauen, sobald du die Links hast.
+            </p>
+            <ul class="list" style="margin-top:12px">
+              <li><b>🎥 Video‑Highlight</b> <span class="pill">Link einfügen</span></li>
+              <li><b>🎧 Live‑Mitschnitt</b> <span class="pill">Link einfügen</span></li>
+              <li><b>📸 Social Media</b> <span class="pill">Link einfügen</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="uebermich">
+      <div class="container">
+        <div class="card">
+          <h2>Über mich</h2>
+          <p>
+            Ich bin EHA aus Roding – Alleinunterhalter mit <b>Keyboard & Gesang</b>. Mir ist wichtig, dass die Musik
+            zum Moment passt: dezent im Hintergrund, wenn Gespräche im Vordergrund stehen – und später mitreißend, wenn
+            getanzt und gefeiert wird. Ihr bekommt ein unkompliziertes Setup, klare Absprachen und einen Abend,
+            an den man sich gerne erinnert.
+          </p>
+          <div class="divider"></div>
+          <ul class="list">
+            <li><b>Aufbau</b> <span>rechtzeitig vor Beginn</span></li>
+            <li><b>Wunschmusik</b> <span>nach Absprache</span></li>
+            <li><b>Region</b> <span>Roding & Umgebung</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="ablauf">
+      <div class="container">
+        <div class="card">
+          <h2>Ablauf – so einfach geht’s</h2>
+          <p>In 3 Schritten zum gelungenen Abend:</p>
+
+          <div class="divider"></div>
+
+          <div class="grid">
+            <div class="card" style="background:rgba(255,255,255,.03)">
+              <h3 style="margin:0 0 6px">1) Anfrage</h3>
+              <p>Datum, Ort, Anlass, Zeitrahmen – kurz & unkompliziert.</p>
+            </div>
+            <div class="card" style="background:rgba(255,255,255,.03)">
+              <h3 style="margin:0 0 6px">2) Abstimmung</h3>
+              <p>Musikstil, Lautstärke, Programmpunkte, Wunschmusik – wir legen alles fest.</p>
+            </div>
+            <div class="card" style="background:rgba(255,255,255,.03)">
+              <h3 style="margin:0 0 6px">3) Auftritt</h3>
+              <p>Aufbau rechtzeitig vor Beginn – dann heißt’s: genießen, tanzen, feiern.</p>
+            </div>
+            <div class="card" style="background:rgba(255,255,255,.03)">
+              <h3 style="margin:0 0 6px">Optional</h3>
+              <p>Moderation, Begleitung von Spielen/Einlagen, Verlängerung nach Absprache.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="container">
+        <div class="contact">
+          <div class="card">
+            <h2>Kontakt & Anfrage</h2>
+            <p>Schreib mir kurz – ich melde mich schnellstmöglich zurück.</p>
+
+            <div class="divider"></div>
+
+            <p style="margin:0 0 6px"><b>EHA – Alleinunterhalter</b></p>
+            <p style="margin:0; color:var(--muted)">
+              Roding · Bayern<br/>
+              <span class="pill">Keyboard</span> <span class="pill">Gesang</span> <span class="pill">Live</span>
+            </p>
+
+            <p class="small">
+              <b>WICHTIG:</b> Trage unten deine echten Kontaktdaten ein (Telefon / E‑Mail / WhatsApp).
+            </p>
+
+            <!-- KONTAKT-BUTTONS: HIER DEINE DATEN EINTRAGEN -->
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+              <a class="btn" href="tel:+49151279579551">📞 Anrufen</a>
+              <a class="btn" href="mailto:eiglspergej@gmail.com">✉️ E‑Mail</a>
+              <a class="btn" href="https://wa.me/49151279579551" target="_blank" rel="noreferrer">💬 WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Kurze Anfrage senden</h2>
+            <p>
+              Dieses Formular ist ein Beispiel. Damit es wirklich E‑Mails verschickt, brauchst du ein Formular‑Backend
+              (z. B. Formspree). Wenn du das nicht willst, reicht Telefon/WhatsApp/E‑Mail.
+            </p>
+
+            <div class="divider"></div>
+
+            <form onsubmit="event.preventDefault(); alert('Danke! Trage für echtes Senden ein Formular-Backend ein (z.B. Formspree) oder nutze Telefon/WhatsApp/E-Mail.');">
+              <input type="text" name="name" placeholder="Dein Name" required />
+              <input type="email" name="email" placeholder="E‑Mail" required />
+              <input type="text" name="event" placeholder="Anlass (z.B. Geburtstag, Hochzeit…)" />
+              <input type="text" name="date" placeholder="Datum & Ort" />
+              <textarea name="msg" placeholder="Nachricht (Zeitrahmen, Gästezahl, Musikwünsche…)"></textarea>
+              <button class="cta" type="submit">Anfrage abschicken →</button>
+              <p class="small">Datenschutz: Bitte keine sensiblen Daten senden.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-inner">
+          <div>© <span id="year"></span> EHA · Alleinunterhalter aus Roding</div>
+          <div class="links">
+            <a href="#top">Nach oben</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
