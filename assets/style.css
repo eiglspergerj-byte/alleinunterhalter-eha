@@ -1,0 +1,265 @@
+
+
+:root{
+  --bg1:#07070a; --bg2:#0b0b12;
+  --card:rgba(255,255,255,.06);
+  --border:rgba(255,255,255,.14);
+  --txt:#fff; --muted:rgba(255,255,255,.75);
+  --shadow:0 18px 60px rgba(0,0,0,.55);
+  --blue:#1f3cff;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; min-height:100vh;
+  font-family:Arial, Helvetica, sans-serif;
+  color:var(--txt);
+  background:
+    radial-gradient(1100px 520px at 50% 15%, rgba(80,140,255,.22), transparent 60%),
+    radial-gradient(900px 480px at 65% 35%, rgba(255,120,220,.16), transparent 55%),
+    radial-gradient(700px 420px at 35% 45%, rgba(255,210,120,.12), transparent 55%),
+    linear-gradient(180deg, var(--bg1), var(--bg2));
+  display:flex; align-items:center; justify-content:center;
+  padding:24px 14px; text-align:center;
+}
+.wrap{width:min(980px,100%)}
+.card{
+  margin:0 auto; width:min(860px,100%);
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  box-shadow:var(--shadow);
+  padding:28px 20px 22px;
+  backdrop-filter:blur(8px);
+}
+.logo{
+  width:260px; max-width:75vw; height:auto;
+  display:block; margin:0 auto 14px;
+  filter:drop-shadow(0 16px 22px rgba(0,0,0,.45));
+}
+h1{margin:6px 0 6px; font-size:clamp(26px,3.2vw,40px); letter-spacing:.5px}
+.sub{margin:0 auto 16px; max-width:60ch; color:var(--muted); font-size:clamp(15px,1.6vw,18px); line-height:1.45}
+
+.nav{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:10px 0 18px}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:10px 14px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,0,0,.25);
+  color:#fff; text-decoration:none; font-weight:700;
+}
+.btn:hover{background:rgba(255,255,255,.12)}
+.btn.primary{background:rgba(31,60,255,.55); border-color:rgba(31,60,255,.85)}
+.btn.primary:hover{background:rgba(31,60,255,.70)}
+
+.pillrow{display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin:14px 0 18px}
+.pill{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:10px 12px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(0,0,0,.18);
+  color:rgba(255,255,255,.80);
+  font-size:14px;
+  user-select:none;
+}
+.actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:10px}
+
+.section{
+  margin:18px auto 0;
+  width:min(720px,100%);
+  text-align:left;
+  color:rgba(255,255,255,.85);
+  font-size:15px;
+  line-height:1.55;
+}
+.section h2{margin:0 0 8px; color:#fff; font-size:18px}
+.footer{
+  margin-top:18px;
+  color:rgba(255,255,255,.55);
+  font-size:12px;
+  display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+}
+.footer a{color:rgba(255,255,255,.70); text-decoration:none}
+.footer a:hover{text-decoration:underline}
+
+.field{width:100%; padding:10px; border-radius:10px; border:none; margin:8px 0}
+textarea.field{height:110px; resize:vertical}
+
+@media (max-width:420px){
+  .logo{width:240px}
+  .card{padding:24px 14px 18px}
+  .btn{width:100%}
+}
+
+Schritt 2: Seite-Dateien anlegen (Copy/Paste)
+1) index.html (Start)
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alleinunterhalter EHA</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <img src="/Logo.png" alt="Alleinunterhalter EHA Logo" class="logo">
+      <h1>Alleinunterhalter EHA</h1>
+      <p class="sub">Live-Musik für (fast) jede Gelegenheit</p>
+
+      <nav class="nav">
+        <a class="btn" href="/index.html">🏠 Start</a>
+        <a class="btn" href="/ueber-mich.html">🙋 Über mich</a>
+        <a class="btn" href="/repertoire.html">🎶 Repertoire</a>
+        <a class="btn" href="/kontakt.html">✉️ Kontakt</a>
+        <a class="btn primary" href="/buchungsanfrage.html">📅 Buchungsanfrage</a>
+      </nav>
+
+      <div class="pillrow">
+        <div class="pill">🎹 Keyboard &amp; Gesang</div>
+        <div class="pill">🎤 Moderation</div>
+        <div class="pill">💃 Tanzmusik</div>
+        <div class="pill">🎉 Hochzeit · Geburtstag · Firmenfeier</div>
+      </div>
+
+      <div class="actions">
+        <a class="btn primary" href="mailto:info@alleinunterhalter-eha.de">✉️ E-Mail</a>
+        <a class="btn" href="tel:+4915129579551">📞 Anrufen</a>
+        <a class="btn" href="https://wa.me/4915129579551" target="_blank" rel="noopener">💬 WhatsApp</a>
+      </div>
+
+      <div class="footer">
+        <span>© Alleinunterhalter EHA</span>
+        <span>·</span>
+        <a href="/impressum.html">Impressum</a>
+        <span>·</span>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+2) ueber-mich.html
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Über mich – Alleinunterhalter EHA</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <nav class="nav">
+        <a class="btn" href="/index.html">🏠 Start</a>
+        <a class="btn" href="/ueber-mich.html">🙋 Über mich</a>
+        <a class="btn" href="/repertoire.html">🎶 Repertoire</a>
+        <a class="btn" href="/kontakt.html">✉️ Kontakt</a>
+        <a class="btn primary" href="/buchungsanfrage.html">📅 Buchungsanfrage</a>
+      </nav>
+
+      <h1>Über mich</h1>
+      <p class="sub">Musik, Stimmung und ein Ablauf, der für dich entspannt bleibt.</p>
+
+      <div class="section">
+        <h2>Was du bekommst</h2>
+        <p>
+          Live-Musik mit Keyboard &amp; Gesang – von dezent im Hintergrund bis zur vollen Tanzfläche.
+          Moderation ist möglich, Technik ist vorhanden, Aufbau unkompliziert.
+        </p>
+
+        <h2>Für welche Anlässe</h2>
+        <p>
+          Hochzeit, Geburtstag, Jubiläum, Vereinsfest, Firmenfeier – flexibel nach Publikum und Stimmung.
+        </p>
+      </div>
+
+      <div class="footer">
+        <a href="/kontakt.html">Kontakt</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+3) repertoire.html
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repertoire – Alleinunterhalter EHA</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <nav class="nav">
+        <a class="btn" href="/index.html">🏠 Start</a>
+        <a class="btn" href="/ueber-mich.html">🙋 Über mich</a>
+        <a class="btn" href="/repertoire.html">🎶 Repertoire</a>
+        <a class="btn" href="/kontakt.html">✉️ Kontakt</a>
+        <a class="btn primary" href="/buchungsanfrage.html">📅 Buchungsanfrage</a>
+      </nav>
+
+      <h1>Repertoire</h1>
+      <p class="sub">Flexibel – passend zum Publikum und zum Anlass.</p>
+
+      <div class="section">
+        <h2>Stilrichtungen</h2>
+        <p>Schlager · Oldies · Pop/Rock · Tanzklassiker · Stimmungsmusik</p>
+
+        <h2>Wunschlieder</h2>
+        <p>Gerne vorab – damit dein Abend genau so wird, wie du ihn dir vorstellst.</p>
+      </div>
+
+      <div class="footer">
+        <a href="/kontakt.html">Kontakt</a> · <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
+4) kontakt.html
+
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt – Alleinunterhalter EHA</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card">
+      <nav class="nav">
+        <a class="btn" href="/index.html">🏠 Start</a>
+        <a class="btn" href="/ueber-mich.html">🙋 Über mich</a>
+        <a class="btn" href="/repertoire.html">🎶 Repertoire</a>
+        <a class="btn" href="/kontakt.html">✉️ Kontakt</a>
+        <a class="btn primary" href="/buchungsanfrage.html">📅 Buchungsanfrage</a>
+      </nav>
+
+      <h1>Kontakt</h1>
+      <p class="sub">Schnell erreichbar – so wie es dir am liebsten ist.</p>
+
+      <div class="actions">
+        <a class="btn primary" href="mailto:info@alleinunterhalter-eha.de">✉️ info@alleinunterhalter-eha.de</a>
+        <a class="btn" href="tel:+4915129579551">📞 +49 151 29579551</a>
+        <a class="btn" href="https://wa.me/4915129579551" target="_blank" rel="noopener">💬 WhatsApp öffnen</a>
+      </div>
+
+      <div class="footer">
+        <a href="/impressum.html">Impressum</a> · <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
